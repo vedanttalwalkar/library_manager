@@ -9,17 +9,25 @@ import '../data/list_of_users.dart';
 import '../snack_bars.dart';
 
 // ignore: must_be_immutable
-class UserPageScreen extends StatelessWidget {
-  UserPageScreen({super.key});
+class UserPageScreen extends StatefulWidget {
+  const UserPageScreen({super.key});
+
+  @override
+  State<UserPageScreen> createState() => _UserPageScreenState();
+}
+
+class _UserPageScreenState extends State<UserPageScreen> {
   final TextEditingController text1EditingController = TextEditingController();
 
   final TextEditingController textEditingController = TextEditingController();
+
   OutlineInputBorder textFieldKa = const OutlineInputBorder(
       borderRadius: BorderRadius.all(Radius.circular(30)),
       borderSide: BorderSide(
         color: Colors.white,
         width: 3,
       ));
+
   @override
   Widget build(BuildContext context) {
     final userBloc = context.read<UserPageBloc>();

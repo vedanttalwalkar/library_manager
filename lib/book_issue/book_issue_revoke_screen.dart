@@ -9,9 +9,14 @@ import 'package:library_manager/data/user.dart';
 import '../data/list_of_books.dart';
 import '../data/list_of_users.dart';
 
-class BookIssueRevokeScreen extends StatelessWidget {
+class BookIssueRevokeScreen extends StatefulWidget {
   const BookIssueRevokeScreen({super.key});
 
+  @override
+  State<BookIssueRevokeScreen> createState() => _BookIssueRevokeScreenState();
+}
+
+class _BookIssueRevokeScreenState extends State<BookIssueRevokeScreen> {
   @override
   Widget build(BuildContext context) {
     final bookIssueRevokeBloc = context.read<BookIssueRevokeBloc>();

@@ -19,9 +19,14 @@ TextEditingController textEditingController = TextEditingController();
 TextEditingController textEditingController1 = TextEditingController();
 TextEditingController textEditingController2 = TextEditingController();
 
-class BookPageScreen extends StatelessWidget {
+class BookPageScreen extends StatefulWidget {
   const BookPageScreen({super.key});
 
+  @override
+  State<BookPageScreen> createState() => _BookPageScreenState();
+}
+
+class _BookPageScreenState extends State<BookPageScreen> {
   @override
   Widget build(BuildContext context) {
     final bookBloc = context.read<BookPageBloc>();
