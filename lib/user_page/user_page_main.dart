@@ -12,7 +12,7 @@ class UserPageMain extends StatelessWidget {
       create: (context) {
         return UserPageBloc();
       },
-      child: UserPageScreen(),
+      child: const UserPageScreen(),
     );
   }
 }
